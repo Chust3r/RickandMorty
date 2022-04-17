@@ -13,9 +13,9 @@
 <body class="bg-morty">
 
     <div class="bg-morty sticky top-0 bg-box shadow-sm z-10">
-        <header class="container mx-auto flex justify-between items-center py-1  px-3">
+        <header class="container mx-auto flex flex:col justify-between items-center py-1  px-3">
             <div class="h-16">
-                <img src="assets/RickAndMortyTitle.png" alt="" class="h-full w-full object-contain">
+                <img src="assets/RickAndMorty.png" alt="" class="h-full w-full object-contain">
             </div>
             <input type="text" placeholder="Search by name..." class="mx-2 outline-none border-none py-1 px-3 rounded min-w-[200px bg-slate-50" id="search-box">
         </header>
@@ -31,10 +31,10 @@
 
 <template id="templateCard">
     <figure class="bg-box flex flex-col md:flex-row  rounded-lg overflow-hidden text-letter" data-aos="zoom-in">
-        <div class="w-full  h-64 md:w-56 md:h-56">
+        <div class="w-full h-64 md:w-56 md:h-56">
             <img class="object-cover h-full w-full object-center">
         </div>
-        <figcaption class="w-[380px] p-4 flex flex-col justify-between gap-5 md:gap-0">
+        <figcaption class="w-[250px] sm:w-[380px] p-4 flex flex-col justify-between gap-5 md:gap-0">
 
             <div>
                 <h2 class="font-title text-2xl font-bold" id="name"></h2>
