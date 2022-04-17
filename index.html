@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Infinito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="App.js" defer></script>
+    <script src="Tailwind.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-morty">
+
+    <div class="bg-morty sticky top-0 bg-box shadow-sm z-10">
+        <header class="container mx-auto flex justify-between items-center py-1  px-3">
+            <div class="h-16">
+                <img src="assets/RickAndMortyTitle.png" alt="" class="h-full w-full object-contain">
+            </div>
+            <input type="text" placeholder="Search by name..." class="mx-2 outline-none border-none py-1 px-3 rounded min-w-[200px bg-slate-50" id="search-box">
+        </header>
+    </div>
+
+    <main id="main" class="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 place-items-center py-7">
+
+    </main>
+    
+
+
+</body>
+
+<template id="templateCard">
+    <figure class="bg-box flex flex-col md:flex-row  rounded-lg overflow-hidden text-letter" data-aos="zoom-in">
+        <div class="w-full  h-64 md:w-56 md:h-56">
+            <img class="object-cover h-full w-full object-center">
+        </div>
+        <figcaption class="w-[380px] p-4 flex flex-col justify-between gap-5 md:gap-0">
+
+            <div>
+                <h2 class="font-title text-2xl font-bold" id="name"></h2>
+                <p class="text-letter font-medium inline-flex items-center gap-2 capitalize">
+                    <span class="w-2 h-2 rounded-full" id="mark_status"></span>
+                    <span id="status"></span>
+                </p>
+            </div>
+
+            <div>
+                <span class="font-medium text-subtitles">Last known location:</span>
+                <p class="text-lg" id="location"></p>
+            </div>
+            <div>
+                <span class="font-medium text-subtitles">First seen in:</span>
+                <p class="text-lg capitalize" id="first_episode"></p>
+            </div>
+
+        </figcaption>
+    </figure>     
+
+</template>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      once:true
+  });
+</script>
+</html>
+
